@@ -16,7 +16,6 @@ formularioLogin.addEventListener("submit", function (event) {
         return false;
     }
 
-    // Buscamos si existe un usuario con ese correo y esa contraseña
     let usuarios = JSON.parse(localStorage.getItem("usuarios"));
     if (usuarios === null) {
         usuarios = [];
@@ -24,8 +23,12 @@ formularioLogin.addEventListener("submit", function (event) {
 
     let usuarioEncontrado = null;
     for (let i = 0; i < usuarios.length; i++) {
-        if (usuarios[i].email === email && usuarios[i].clave === clave) {
-            usuarioEncontrado = usuarios[i];
+        const u = usuarios[i];
+        const emailGuardado = String(u.email || u.correo || "").trim().toLowerCase();
+        const claveGuardada = String(u.clave || u.contrasena || u["contraseña"] || u.password || "");
+
+        if (emailGuardado === email && claveGuardada === clave) {
+            usuarioEncontrado = { email: emailGuardado, clave: claveGuardada };
         }
     }
 

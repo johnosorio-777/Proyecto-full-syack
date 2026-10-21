@@ -4,52 +4,82 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard - TusPeriféricos</title>
+
+
 <link rel="stylesheet" href="dashboard.css">
 </head>
 
 <body>
 
+
 <aside class="sidebar" id="sidebar">
-    <h2 class="logo">TusPeriféricos</h2>
+    <h2 class="logo">🎮 TusPeriféricos</h2>
+
     <nav>
+      
         <a href="#" class="menu-item active" data-seccion="inicio">🏠 Inicio</a>
-        <a href="#" class="menu-item" data-seccion="usuarios">📋 Usuarios</a>
+        <a href="#" class="menu-item" data-seccion="pedidos">🧾 Pedidos</a>
         <a href="#" class="menu-item" data-seccion="perfil">👤 Perfil</a>
+
+       
+        <a href="productos.html" class="menu-item">🖱️ Productos</a>
+        <a href="pcs.html" class="menu-item">💻 PC Armados</a>
+        <a href="carrito.html" class="menu-item">🛒 Carrito</a>
+
         <a href="#" class="menu-item" id="btnSalir">🚪 Cerrar sesión</a>
     </nav>
 </aside>
 
-<main class="contenido">
-    <header class="topbar">
-        <button id="btnMenu" class="btn-menu">☰</button>
-        <span>Hola, <strong id="emailUsuario"></strong></span>
-    </header>
 
+<main class="contenido">
+
+
+    
     <section id="inicio" class="seccion activa">
-        <h1>Bienvenido al dashboard</h1>
-        <div class="tarjetas">
-            <div class="tarjeta"><h3>Usuarios registrados</h3><p id="totalUsuarios">0</p></div>
-            <div class="tarjeta"><h3>Productos</h3><p>24</p></div>
-            <div class="tarjeta"><h3>Pedidos</h3><p>5</p></div>
+
+      
+        <div class="bienvenida">
+            <h1>Bienvenido/a, <span id="nombreBienvenida"></span></h1>
+            <p id="fechaHoy"></p>
         </div>
+
+        
+        <h2>Resumen</h2>
+        <div class="tarjetas">
+            <div class="tarjeta"><h3>Productos</h3><p id="kpiProductos">0</p></div>
+            <div class="tarjeta"><h3>PC armados</h3><p id="kpiPcs">0</p></div>
+            <div class="tarjeta"><h3>En carrito</h3><p id="kpiCarrito">0</p></div>
+            <div class="tarjeta"><h3>Pedidos</h3><p id="kpiPedidos">0</p></div>
+            <div class="tarjeta"><h3>Ventas</h3><p id="kpiVentas">$0</p></div>
+        </div>
+
+       
+        <h2>Accesos rápidos</h2>
+        <div class="accesos">
+            <a href="productos.html" class="acceso">🖱️ Productos</a>
+            <a href="pcs.html" class="acceso">💻 PC Armados</a>
+            <a href="carrito.html" class="acceso">🛒 Carrito</a>
+        </div>
+
+        
+        <h2>Últimos pedidos</h2>
+        <div id="listaPedidos"></div>
     </section>
 
+    <section id="pedidos" class="seccion">
+        <h1>Pedidos</h1>
+        <table>
+            <thead>
+                <tr><th>Fecha</th><th>Cliente</th><th>Pago</th><th>Total</th></tr>
+            </thead>
+           
+            <tbody id="tablaPedidos"></tbody>
+        </table>
+    </section>
+
+   
     <section id="usuarios" class="seccion">
         <h1>Usuarios registrados</h1>
         <table>
             <thead>
-                <tr><th>#</th><th>Correo</th></tr>
-            </thead>
-            <tbody id="tablaUsuarios"></tbody>
-        </table>
-    </section>
-
-    <section id="perfil" class="seccion">
-        <h1>Perfil</h1>
-        <p><strong>Correo:</strong> <span id="perfilEmail"></span></p>
-    </section>
-</main>
-
-<script src="js/dashboard.js"></script>
-</body>
-</html>
+                <tr><th>#</th><th>Nombre</th><th>Correo</th></tr>

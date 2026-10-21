@@ -1,64 +1,156 @@
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+/* ===== GENERAL ===== */
 
-body { display: flex; min-height: 100vh; background: #f4f6f9; }
+* {
+    box-sizing: border-box;   /* evita que las cajas se salgan por el padding */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f3f4f6;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h2 {
+    margin: 25px 0 10px;
+    font-size: 18px;
+}
+
+
+/* ===== MENÚ LATERAL ===== */
 
 .sidebar {
+    position: fixed;          /* se queda quieto en la izquierda */
+    top: 0;
+    left: 0;
     width: 230px;
-    background: #1e293b;
-    color: white;
+    height: 100%;
+    background-color: #1e293b;
     padding: 20px 0;
-    transition: margin-left 0.3s;
 }
-.logo { text-align: center; margin-bottom: 30px; font-size: 20px; }
+
+.logo {
+    margin: 0 0 20px;
+    padding: 0 20px;
+    font-size: 20px;
+    color: white;
+}
 
 .menu-item {
-    display: block;
-    padding: 14px 24px;
+    display: block;           /* un link por línea */
+    padding: 12px 20px;
     color: #cbd5e1;
     text-decoration: none;
 }
-.menu-item:hover { background: #334155; color: white; }
-.menu-item.active { background: #2563eb; color: white; }
 
-.contenido { flex: 1; display: flex; flex-direction: column; }
+.menu-item:hover {
+    background-color: #334155;
+}
+
+.menu-item.active {           /* la opción seleccionada */
+    background-color: #2563eb;
+    color: white;
+}
+
+
+/* ===== CONTENIDO ===== */
+
+.contenido {
+    margin-left: 230px;       /* deja espacio para el menú */
+}
 
 .topbar {
-    background: white;
-    padding: 15px 25px;
     display: flex;
     align-items: center;
     gap: 15px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-}
-.btn-menu {
-    display: none;
-    width: auto;
-    background: none;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
+    padding: 15px 25px;
+    background-color: white;
+    border-bottom: 1px solid #d1d5db;
 }
 
-.seccion { display: none; padding: 30px; }
-.seccion.activa { display: block; }
-.seccion h1 { margin-bottom: 20px; }
-
-.tarjetas { display: flex; gap: 20px; flex-wrap: wrap; }
-.tarjeta {
-    background: white;
+.seccion {
+    display: none;            /* todas ocultas... */
     padding: 25px;
-    border-radius: 10px;
-    min-width: 180px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
-.tarjeta p { font-size: 32px; font-weight: bold; color: #2563eb; margin-top: 8px; }
 
-table { width: 100%; border-collapse: collapse; background: white; }
-th, td { padding: 12px; border-bottom: 1px solid #e2e8f0; text-align: left; }
-th { background: #2563eb; color: white; }
-
-@media (max-width: 768px) {
-    .sidebar { position: fixed; height: 100%; margin-left: -230px; z-index: 10; }
-    .sidebar.abierto { margin-left: 0; }
-    .btn-menu { display: block; }
+.seccion.activa {
+    display: block;           /* ...menos la que tiene "activa" */
 }
+
+
+/* ===== INICIO ===== */
+
+.bienvenida {
+    background-color: #2563eb;
+    color: white;
+    padding: 20px;
+}
+
+.bienvenida p {
+    margin: 0;
+}
+
+.tarjetas,
+.accesos {
+    display: flex;            /* pone los elementos en fila */
+    flex-wrap: wrap;          /* si no caben, pasan a la línea de abajo */
+    gap: 15px;
+}
+
+.tarjeta {
+    width: 170px;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #d1d5db;
+}
+
+.tarjeta h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+}
+
+.tarjeta p {
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.acceso {
+    padding: 12px 20px;
+    color: #1e293b;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #d1d5db;
+}
+
+.pedido {
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #d1d5db;
+}
+
+
+/* ===== TABLAS ===== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;   /* junta los bordes de las celdas */
+    background-color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5db;
+}
+
+th {
+    background-color: #e5e7eb;
+}
+
+

@@ -28,11 +28,9 @@ formularioRegistro.addEventListener("submit", function (event) {
         }
     }
 
-    const nuevoUsuario = { email: email, clave: clave };
-    usuarios.push(nuevoUsuario);
+    usuarios.push({ email: email, clave: clave });
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-    // Deja la sesión iniciada y entra al dashboard
-    localStorage.setItem("usuarioActivo", JSON.stringify(nuevoUsuario));
-    window.location = "dashboard.html";
+    alert("Cuenta creada. Ahora inicia sesión.");
+    window.location = "index.html";
 });
