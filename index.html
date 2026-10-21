@@ -1,84 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estilo.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - TusPeriféricos</title>
+<link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
 
-    <nav class="navbar">
+<nav class="navbar">
 
-        <div class="tituloNav">
-            Titulo web
-        </div>
+<div class="tituloNav">
+ TusPeriféricos
+</div>
 
-        <div class="menu">
-            <a href="">
-                Inicio
-            </a>
-            <a href=""> Formulario</a>
-            <a href=""> Login</a>
-            <a href="tabla.html"> Tabla</a>
+<div class="menu">
+<a href="index.html">Login</a>
+<a href="registro.html">Registro</a>
+</div>
 
-        </div>
+</nav>
 
-    </nav>
+<div class="formularioContenedor">
 
-    <div class="formularioContenedor">
+<div class="cajaLogin">
 
-        <form class="formulariostyle" id="formulario">
-            <h1>Registro de usuario</h1>
-            <hr style="margin-bottom: 20px;">
+<h2>Iniciar sesión</h2>
 
-            <!-- nombre y apellidp -->
-            <div class="fila">
-                <div class="campo">
-                    <label>Nombre</label>
-                    <input type="text" id="nombreInput" placeholder="Ingrese su nombre">
+<form id="formularioLogin">
+<label for="emailInput">Correo</label>
+<input type="text" id="emailInput" placeholder="correo@ejemplo.cl">
 
-                </div>
-                <div class="campo">
-                    <label>Apellido</label>
-                    <input type="text" id="apellidoInput" placeholder="Ingrese su apellido">
+<label for="claveInput">Contraseña</label>
+<input type="password" id="claveInput" placeholder="Tu contraseña">
 
-                </div>
-            </div>
+<button type="submit">Entrar</button>
+</form>
 
-            <!-- datos de contacto -->
+<p>¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
 
+</div>
 
-            <div class="fila">
-                <div class="campo">
-                    <label>Telefono</label>
-                    <input type="text" id="telefonoInput" placeholder="+5695051525354">
-                </div>
-                <div class="campo">
-                    <label>Comuna</label>
-                    <select id="comunaSelect">
-                        <option value=""> Seleccione su comúna</option>
-                        <option value="San bernardo">San bernardo </option>
-                        <option value="La florida">La florida</option>
-                        <option value="Maipu">Maipu</option>
-                        <option value="Estacion central">Estacion central</option>
-                    </select>
-                </div>
-            </div>
-            
+</div>
 
-            <div class="botones">
-                <button class="botonGuardar" type="submit">Guardar</button>
-            </div>
-            <div class="boton2">
-                <button type="button" id="botonJuego">Guardar Juego</button>
-            </div>
-
-        </form>
-        <script src="validaciones.js"></script>
-    </div>
+<script src="js/login.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
-*{
-    box-sizing: border-box;
+{
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -9,38 +9,65 @@
     color: white;
     display: flex;
     justify-content: space-between;
-    align-items: center ;
+    align-items: center;
     padding: 0 40px;
 }
-.tituloNav{
+
+.tituloNav {
     font-weight: bold;
+    font-size: 48px;
+    font-weight: bold;      /* letra gruesa */
+    text-align: center;     /* centrado */
+    color: #000000;         /* color */
 }
-.menu{
+
+.menu {
     padding: 30px;
 }
-.menu a{
 
+.menu a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    margin-left: 20px;
 }
 
-.menu a:hover{
+.menu a:hover {
     color: grey;
     transition: 1000ms;
     font-size: 25px;
 }
 
-
-
-
-
-
-.formularioContenedor{
-    height: 100vh;
+.formularioContenedor {
+    height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.cajaLogin {
+    width: 350px;
+    border: 1px solid grey;
+    padding: 25px;
+}
 
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 8px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
