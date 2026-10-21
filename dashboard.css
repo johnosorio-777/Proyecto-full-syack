@@ -1,7 +1,7 @@
-/* ===== GENERAL ===== */
+
 
 * {
-    box-sizing: border-box;   /* evita que las cajas se salgan por el padding */
+    box-sizing: border-box;   
 }
 
 body {
@@ -20,10 +20,10 @@ h2 {
 }
 
 
-/* ===== MENÚ LATERAL ===== */
+
 
 .sidebar {
-    position: fixed;          /* se queda quieto en la izquierda */
+    position: fixed;          
     top: 0;
     left: 0;
     width: 230px;
@@ -40,7 +40,7 @@ h2 {
 }
 
 .menu-item {
-    display: block;           /* un link por línea */
+    display: block;          
     padding: 12px 20px;
     color: #cbd5e1;
     text-decoration: none;
@@ -50,16 +50,16 @@ h2 {
     background-color: #334155;
 }
 
-.menu-item.active {           /* la opción seleccionada */
+.menu-item.active {           
     background-color: #2563eb;
     color: white;
 }
 
 
-/* ===== CONTENIDO ===== */
+
 
 .contenido {
-    margin-left: 230px;       /* deja espacio para el menú */
+    margin-left: 230px;       
 }
 
 .topbar {
@@ -72,16 +72,16 @@ h2 {
 }
 
 .seccion {
-    display: none;            /* todas ocultas... */
+    display: none;           
     padding: 25px;
 }
 
 .seccion.activa {
-    display: block;           /* ...menos la que tiene "activa" */
+    display: block;          
 }
 
 
-/* ===== INICIO ===== */
+
 
 .bienvenida {
     background-color: #2563eb;
@@ -95,8 +95,7 @@ h2 {
 
 .tarjetas,
 .accesos {
-    display: flex;            /* pone los elementos en fila */
-    flex-wrap: wrap;          /* si no caben, pasan a la línea de abajo */
+    display: flex;            
     gap: 15px;
 }
 
@@ -135,11 +134,11 @@ h2 {
 }
 
 
-/* ===== TABLAS ===== */
+
 
 table {
     width: 100%;
-    border-collapse: collapse;   /* junta los bordes de las celdas */
+    border-collapse: collapse;   
     background-color: white;
 }
 
