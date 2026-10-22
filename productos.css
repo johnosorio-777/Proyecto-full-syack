@@ -1,0 +1,90 @@
+/* Estilos extra para productos.html (el resto viene de dashboard.css) */
+
+.formulario {
+    max-width: 480px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid #d1d5db;
+}
+
+.formulario label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea,
+.filtros input,
+.filtros select {
+    width: 100%;
+    padding: 9px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border: 1px solid #d1d5db;
+    background-color: white;
+}
+
+.formulario button,
+.btnEditar,
+.btnEliminar {
+    padding: 9px 16px;
+    margin-top: 15px;
+    color: white;
+    font-size: 14px;
+    background-color: #2563eb;
+    border: none;
+    cursor: pointer;
+}
+
+.formulario button:hover,
+.btnEditar:hover {
+    background-color: #1d4ed8;
+}
+
+.btnGris {
+    margin-left: 8px;
+    background-color: #64748b !important;
+}
+
+.filtros {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.filtros input {
+    flex: 2;
+}
+
+.filtros select {
+    flex: 1;
+}
+
+.btnEditar,
+.btnEliminar {
+    margin-top: 0;
+    padding: 5px 10px;
+}
+
+.btnEliminar {
+    margin-left: 5px;
+    background-color: #dc2626;
+}
+
+.btnEliminar:hover {
+    background-color: #b91c1c;
+}
+
+.stockBajo {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.vacio {
+    text-align: center;
+    color: #6b7280;
+}
