@@ -35,7 +35,6 @@ function iniciarDashboard() {
         nombre = usuario.nombre;
     }
 
-    document.getElementById("emailUsuario").textContent = usuario.email;
     document.getElementById("nombreBienvenida").textContent = nombre;
     document.getElementById("perfilNombre").textContent = nombre;
     document.getElementById("perfilEmail").textContent = usuario.email;
