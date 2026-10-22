@@ -1,0 +1,32 @@
+.filtros {
+    margin-bottom: 20px;
+}
+
+.filtros button {
+    margin: 0 3px;
+}
+
+.filtros button.activo {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+}
+
+.rango {
+    padding: 3px 10px;
+    font-size: 12px;
+    color: white;
+    background-color: #2563eb;
+}
+
+.rango.Alta {
+    background-color: orange;
+}
+
+.rango.Extrema {
+    background-color: red;
+}
+
+.pc button {
+    width: 100%;
+}

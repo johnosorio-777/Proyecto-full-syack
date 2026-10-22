@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PC Armados - TusPeriféricos</title>
+<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="pcs.css">
+</head>
+<body>
+<nav class="navbar">
+<div class="tituloNav">TusPeriféricos</div>
+<div class="menu">
+<a href="dashboard.html">Dashboard</a>
+<a href="productos.html">Productos</a>
+<a href="pcs.html" class="activo">PC Armados</a>
+<a href="carrito.html">Carrito</a>
+<a href="#" id="botonSalir">Salir</a>
+</div>
+</nav>
+<div class="contenido">
+<h1>PC armados</h1>
+<div class="filtros">
+<button class="activo secundario" data-rango="Todos">Todos</button>
+<button class="secundario" data-rango="Media">Gama Media</button>
+<button class="secundario" data-rango="Alta">Gama Alta</button>
+<button class="secundario" data-rango="Extrema">Gama Extrema</button>
+</div>
+<div class="grilla" id="listaPcs"></div>
+</div>
+<script src="js/sesion.js"></script>
+<script src="js/datos.js"></script>
+<script src="js/pcs.js"></script>
+</body>
+</html>
