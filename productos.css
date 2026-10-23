@@ -1,0 +1,49 @@
+.formulario {
+    max-width: 450px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid #d1d5db;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 12px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea,
+.filtros input,
+.filtros select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+}
+
+.filtros {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 8px 14px;
+    margin-top: 15px;
+    color: white;
+    background-color: #2563eb;
+    border: none;
+    cursor: pointer;
+}
+
+.btnGris {
+    background-color: #64748b;
+}
+
+.btnEliminar {
+    background-color: #dc2626;
+}
+
+td button {
+    margin-top: 0;
+}

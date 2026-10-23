@@ -1,0 +1,74 @@
+.vacio {
+    padding: 20px;
+    color: grey;
+    background-color: white;
+    border: 1px solid #d1d5db;
+}
+
+.total {
+    margin: 20px 0;
+    font-size: 20px;
+    text-align: right;
+}
+
+.total strong {
+    color: green;
+}
+
+.compra {
+    max-width: 320px;
+    margin-left: auto;
+}
+
+.compra label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.compra select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    background-color: white;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.acciones button {
+    flex: 1;
+}
+
+#contenidoCarrito button,
+.cantidad button {
+    padding: 8px 15px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#contenidoCarrito button.secundario {
+    background-color: white;
+    color: #1e293b;
+    border: 1px solid #d1d5db;
+}
+
+.cantidad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cantidad button {
+    width: 28px;
+    padding: 4px 0;
+}
+
+#contenidoCarrito button.quitar {
+    background-color: #dc2626;
+    padding: 6px 12px;
+}

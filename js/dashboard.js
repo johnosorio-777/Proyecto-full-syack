@@ -35,7 +35,6 @@ function iniciarDashboard() {
         nombre = usuario.nombre;
     }
 
-    document.getElementById("emailUsuario").textContent = usuario.email;
     document.getElementById("nombreBienvenida").textContent = nombre;
     document.getElementById("perfilNombre").textContent = nombre;
     document.getElementById("perfilEmail").textContent = usuario.email;
@@ -105,14 +104,6 @@ function iniciarDashboard() {
         });
     }
 
-    document.getElementById("btnSalir").addEventListener("click", function (event) {
-        event.preventDefault();
-
-        if (confirm("¿Seguro que quieres cerrar sesión?")) {
-            localStorage.removeItem("usuarioActivo");
-            window.location = "index.html";
-        }
-    });
 }
 
 iniciarDashboard();

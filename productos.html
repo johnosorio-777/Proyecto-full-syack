@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos - TusPeriféricos</title>
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="productos.css">
+</head>
+
+<body>
+
+<aside class="sidebar" id="sidebar">
+    <h2 class="logo">🎮 TusPeriféricos</h2>
+
+    <nav>
+        <a href="dashboard.html" class="menu-item">🏠 Inicio</a>
+        <a href="productos.html" class="menu-item active">🖱️ Productos</a>
+        <a href="pcs.html" class="menu-item">💻 PC Armados</a>
+        <a href="carrito.html" class="menu-item">🛒 Carrito</a>
+        <a href="#" class="menu-item" id="btnSalir">🚪 Cerrar sesión</a>
+    </nav>
+</aside>
+
+<main class="contenido">
+
+    <section class="seccion activa">
+
+        <h1>Productos</h1>
+
+        <h2 id="tituloFormulario">Agregar producto</h2>
+
+        <form id="formularioProducto" class="formulario">
+            <label for="nombreInput">Nombre</label>
+            <input type="text" id="nombreInput" placeholder="Ej: Mouse Logitech G203">
+
+            <label for="categoriaInput">Categoría</label>
+            <select id="categoriaInput">
+                <option value="">Selecciona una categoría</option>
+                <option value="Mouse">Mouse</option>
+                <option value="Teclado">Teclado</option>
+                <option value="Audífonos">Audífonos</option>
+                <option value="Monitor">Monitor</option>
+                <option value="Componentes">Componentes</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <label for="precioInput">Precio (CLP)</label>
+            <input type="number" id="precioInput" placeholder="Ej: 24990">
+
+            <label for="stockInput">Stock</label>
+            <input type="number" id="stockInput" placeholder="Ej: 15">
+
+            <label for="descripcionInput">Descripción (opcional)</label>
+            <textarea id="descripcionInput" rows="3" placeholder="Máximo 200 caracteres"></textarea>
+
+            <button type="submit" id="btnGuardar">Agregar producto</button>
+            <button type="button" id="btnCancelar" class="btnGris" hidden>Cancelar edición</button>
+        </form>
+
+        <h2>Listado de productos</h2>
+
+        <div class="filtros">
+            <input type="text" id="buscarInput" placeholder="Buscar por nombre...">
+
+            <select id="filtroCategoria">
+                <option value="">Todas las categorías</option>
+                <option value="Mouse">Mouse</option>
+                <option value="Teclado">Teclado</option>
+                <option value="Audífonos">Audífonos</option>
+                <option value="Monitor">Monitor</option>
+                <option value="Componentes">Componentes</option>
+                <option value="Otro">Otro</option>
+            </select>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaProductos"></tbody>
+        </table>
+
+    </section>
+
+</main>
+
+<script src="js/productos.js"></script>
+</body>
+</html>
