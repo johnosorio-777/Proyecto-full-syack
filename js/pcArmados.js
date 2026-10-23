@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-const sesion = JSON.parse(localStorage.getItem("sesion"));
-=======
 const sesion = JSON.parse(localStorage.getItem("usuarioActivo"));
->>>>>>> feature/carrito
 if (sesion === null) {
     window.location.href = "index.html";
 }
 
 document.getElementById("btnSalir").addEventListener("click", function (event) {
     event.preventDefault();
-<<<<<<< HEAD
-    localStorage.removeItem("sesion");
-=======
     localStorage.removeItem("usuarioActivo");
->>>>>>> feature/carrito
     window.location.href = "index.html";
 });
 

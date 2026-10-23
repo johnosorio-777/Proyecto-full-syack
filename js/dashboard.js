@@ -41,7 +41,6 @@ function iniciarDashboard() {
     document.getElementById("fechaHoy").textContent = new Date().toLocaleDateString("es-CL");
 
     const productos = leer("productos");
-    const pcs = leer("pcs");
     const carrito = leer("carrito");
     const pedidos = leer("pedidos");
 
@@ -51,7 +50,7 @@ function iniciarDashboard() {
     }
 
     document.getElementById("kpiProductos").textContent = productos.length;
-    document.getElementById("kpiPcs").textContent = pcs.length;
+    document.getElementById("kpiPcs").textContent = PCS.length;
     document.getElementById("kpiCarrito").textContent = carrito.length;
     document.getElementById("kpiPedidos").textContent = pedidos.length;
     document.getElementById("kpiVentas").textContent = "$" + ventas;
