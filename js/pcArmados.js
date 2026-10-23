@@ -1,3 +1,14 @@
+const sesion = JSON.parse(localStorage.getItem("sesion"));
+if (sesion === null) {
+    window.location.href = "index.html";
+}
+
+document.getElementById("btnSalir").addEventListener("click", function (event) {
+    event.preventDefault();
+    localStorage.removeItem("sesion");
+    window.location.href = "index.html";
+});
+
 const listaPcs = document.getElementById("listaPcs");
 const botonesFiltro = document.querySelectorAll(".filtros button");
 
@@ -7,14 +18,14 @@ function mostrarPcs(rango) {
         const pc = PCS[i];
         if (rango === "Todos" || pc.rango === rango) {
             const tarjeta = document.createElement("div");
-            tarjeta.className = "tarjeta pc";
+            tarjeta.className = "pc";
             const etiqueta = document.createElement("span");
             etiqueta.className = "rango " + pc.rango;
             etiqueta.textContent = "Gama " + pc.rango;
             const titulo = document.createElement("h3");
             titulo.textContent = pc.nombre;
             const specs = document.createElement("p");
-            specs.className = "etiqueta";
+            specs.className = "specs";
             specs.textContent = pc.specs;
             const precio = document.createElement("p");
             precio.className = "precio";
