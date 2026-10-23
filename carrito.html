@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrito - TusPeriféricos</title>
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="carrito.css">
+</head>
+
+<body>
+
+<aside class="sidebar" id="sidebar">
+    <h2 class="logo">🎮 TusPeriféricos</h2>
+
+    <nav>
+        <a href="dashboard.html" class="menu-item">🏠 Inicio</a>
+        <a href="productos.html" class="menu-item">🖱️ Productos</a>
+        <a href="pcArmados.html" class="menu-item">💻 PC Armados</a>
+        <a href="carrito.html" class="menu-item active">🛒 Carrito</a>
+        <a href="#" class="menu-item" id="btnSalir">🚪 Cerrar sesión</a>
+    </nav>
+</aside>
+
+<main class="contenido">
+
+    <header class="topbar">
+        <span>Hola, <strong id="emailUsuario"></strong></span>
+    </header>
+
+    <section class="seccion activa">
+        <h1>Carrito</h1>
+
+        <p id="mensajeVacio" class="vacio">Tu carrito está vacío. Agrega productos o PC armados para comprar.</p>
+
+        <div id="contenidoCarrito">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tablaCarrito"></tbody>
+            </table>
+
+            <p class="total">Total: <strong id="totalCarrito">$0</strong></p>
+
+            <div class="compra">
+                <label for="pagoSelect">Método de pago</label>
+                <select id="pagoSelect">
+                    <option value="Tarjeta de débito">Tarjeta de débito</option>
+                    <option value="Tarjeta de crédito">Tarjeta de crédito</option>
+                    <option value="Transferencia">Transferencia</option>
+                </select>
+
+                <div class="acciones">
+                    <button id="btnComprar">Finalizar compra</button>
+                    <button id="btnVaciar" class="secundario">Vaciar carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script src="js/carrito.js"></script>
+</body>
+</html>
