@@ -105,14 +105,6 @@ function iniciarDashboard() {
         });
     }
 
-    document.getElementById("btnSalir").addEventListener("click", function (event) {
-        event.preventDefault();
-
-        if (confirm("¿Seguro que quieres cerrar sesión?")) {
-            localStorage.removeItem("usuarioActivo");
-            window.location = "index.html";
-        }
-    });
 }
 
 iniciarDashboard();
